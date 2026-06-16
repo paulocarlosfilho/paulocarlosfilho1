@@ -1,5 +1,9 @@
 # 🚀 Projeto Currículo Web - Aponti
 
+<p align="center">
+  <img src="https://github.com/paulocarlosfilho.png" alt="Foto de Paulo Carlos" width="200" style="border-radius: 50%;">
+</p>
+
 Este repositório contém o código-fonte do meu currículo profissional estruturado em HTML/CSS, desenvolvido como parte das atividades práticas junto à **Aponti**.
 
 ---
