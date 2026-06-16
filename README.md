@@ -1,4 +1,4 @@
-# 🚀 Projeto Currículo Web - Aponti & Escola da Nuvem
+# 🚀 Projeto Currículo Web - Aponti
 
 Este repositório contém o código-fonte do meu currículo profissional estruturado em HTML/CSS, desenvolvido como parte das atividades práticas junto à **Aponti**.
 
