@@ -17,3 +17,25 @@ jobs:
     # 2. Executa o comando do seu Makefile para testar o build do Docker
     - name: Build Docker Image using Makefile
       run: make build
+
+      name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 1. Primeiro constrói a imagem
+    - name: Build Docker Image
+      run: docker build -t meu-projeto-app .
+
+    # 2. Depois roda o container usando os valores reais (sem as variáveis do Makefile)
+    - name: Run Docker Container
+      run: docker run -d -p 8080:8080 --name meu-projeto-app-container meu-projeto-app
