@@ -1,0 +1,19 @@
+name: CI/CD Pipeline
+
+# Dispara a pipeline em Pull Requests para a develop
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Baixa o código do repositório na máquina virtual do GitHub
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Executa o comando do seu Makefile para testar o build do Docker
+    - name: Build Docker Image using Makefile
+      run: make build
